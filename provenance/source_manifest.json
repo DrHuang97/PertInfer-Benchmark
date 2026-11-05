@@ -1,0 +1,61 @@
+{
+  "source_project": "PertAgent development project",
+  "purpose": "Read-only extraction for standalone benchmark package; no experiment or source data modified",
+  "files": [
+    {
+      "source": "pertagent/path_transfer_v5/schema.py",
+      "sha256": "f0fbcf79b89195969b9f74b477fb213062806bf8fbed6a99aa9eea69d878f8bb",
+      "bytes": 8682
+    },
+    {
+      "source": "pertagent/path_transfer_v5/evaluate.py",
+      "sha256": "a70b9288db5331261263e30d5e47fe140477bdfdb7ed2fe35609a27e0c8d8520",
+      "bytes": 3616
+    },
+    {
+      "source": "pertagent/path_transfer_v5/views.py",
+      "sha256": "e534ef4ca13892687fb49fe134b0442a60b486e059334d4346bc159098e5ab46",
+      "bytes": 4682
+    },
+    {
+      "source": "pertagent/path_transfer_v5/release_v57.py",
+      "sha256": "253854754dcb7c2d4f614ca6b1c9a3e850d4f869c31ba703ec7d265362ab92a9",
+      "bytes": 9704
+    },
+    {
+      "source": "scripts/path_transfer_v5/score_multispecies.py",
+      "sha256": "e8686f27ad702b0e471e85d8e9e4bc9d029a5352007ccf8a1c561511b351b2c6",
+      "bytes": 10275
+    },
+    {
+      "source": "tests/test_path_transfer_v5_benchmark.py",
+      "sha256": "cd8982e877ad0eb2d857f55bf019d7630dab5807abc0b1007f755faa667a1203",
+      "bytes": 12525
+    },
+    {
+      "source": "tests/fixtures/path_transfer_v5/fixture.json",
+      "sha256": "211096aa98cfb3b1b1f55bda4eca261d1d443f0b2c43b679c7a2a54feb688445",
+      "bytes": 5730
+    },
+    {
+      "source": "scripts/path_transfer_v5/build_material_corpus.py",
+      "sha256": "6b32fc3dd5caf607f1b48bb51c0d33379e07c4045e2ee9b71bdf85865779e618",
+      "bytes": 10332
+    },
+    {
+      "source": "tests/test_path_transfer_v5_material_corpus.py",
+      "sha256": "057997ad47043664cd954076212be62ce66494e903c0bddc5fd715e77feeb012",
+      "bytes": 5522
+    },
+    {
+      "source": "pertagent/path_transfer_v5/io.py",
+      "sha256": "e9606801310375732f5f656e9c68d9c21b301288b08726cb0f0215a8865f8208",
+      "bytes": 2918
+    },
+    {
+      "source": "pertagent/path_transfer_v5/freeze.py",
+      "sha256": "3985816e5bf06c5688eba1d9188049b21fa159c5e3a1762437da71956dc180e4",
+      "bytes": 4760
+    }
+  ]
+}

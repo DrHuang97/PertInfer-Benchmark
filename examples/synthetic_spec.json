@@ -1,0 +1,343 @@
+{
+  "tasks": [
+    {
+      "task": {
+        "schema_version": "path_transfer_v5.contract_v1",
+        "task_id": "synthetic_chain",
+        "mechanism_group_id": "fixture",
+        "qualification": "synthetic",
+        "source_taxon": {
+          "taxon_id": 10090,
+          "scientific_name": "Mus musculus"
+        },
+        "source_context": {
+          "host_taxon": 10090,
+          "description": "Synthetic fixture, no experiment"
+        },
+        "human_context": {
+          "host_taxon": 9606,
+          "description": "Synthetic fixture, no experiment"
+        },
+        "perturbation": {
+          "identity": "fixture:input"
+        },
+        "source_start": "input",
+        "source_endpoint": "output",
+        "human_start": {
+          "id": "input",
+          "entity": "fixture:input",
+          "taxon": 0,
+          "type": "compound",
+          "state": {}
+        },
+        "human_endpoint": {
+          "id": "output",
+          "entity": "fixture:output",
+          "taxon": 9606,
+          "type": "rna",
+          "state": {}
+        },
+        "human_response_direction": "not_given",
+        "endpoint_type": "rna",
+        "evaluation_level": "state_explicit"
+      },
+      "source_graph": {
+        "nodes": [
+          {
+            "id": "input",
+            "entity": "fixture:input",
+            "taxon": 0,
+            "type": "compound",
+            "state": {}
+          },
+          {
+            "id": "mediator",
+            "entity": "fixture:mediator",
+            "taxon": 10090,
+            "type": "protein",
+            "state": {}
+          },
+          {
+            "id": "output",
+            "entity": "fixture:output",
+            "taxon": 10090,
+            "type": "rna",
+            "state": {}
+          }
+        ],
+        "reactions": [
+          {
+            "id": "r1",
+            "type": "fixture_step",
+            "inputs": [
+              "input"
+            ],
+            "outputs": [
+              "mediator"
+            ]
+          },
+          {
+            "id": "r2",
+            "type": "fixture_step",
+            "inputs": [
+              "mediator"
+            ],
+            "outputs": [
+              "output"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "e1",
+            "kind": "causal",
+            "sign": "+",
+            "source": "input",
+            "target": "mediator",
+            "reaction_id": "r1"
+          },
+          {
+            "id": "e2",
+            "kind": "causal",
+            "sign": "+",
+            "source": "mediator",
+            "target": "output",
+            "reaction_id": "r2"
+          }
+        ]
+      },
+      "source_provenance": {
+        "records": [],
+        "synthetic": true
+      },
+      "allowed_context": {},
+      "reference_chains": {
+        "chains": [
+          {
+            "chain_id": "fixture",
+            "variants": [
+              {
+                "nodes": [
+                  {
+                    "id": "input",
+                    "entity": "fixture:input",
+                    "taxon": 0,
+                    "type": "compound",
+                    "state": {}
+                  },
+                  {
+                    "id": "mediator",
+                    "entity": "fixture:mediator",
+                    "taxon": 9606,
+                    "type": "protein",
+                    "state": {}
+                  },
+                  {
+                    "id": "output",
+                    "entity": "fixture:output",
+                    "taxon": 9606,
+                    "type": "rna",
+                    "state": {}
+                  }
+                ],
+                "reactions": [
+                  {
+                    "id": "r1",
+                    "type": "fixture_step",
+                    "inputs": [
+                      "input"
+                    ],
+                    "outputs": [
+                      "mediator"
+                    ]
+                  },
+                  {
+                    "id": "r2",
+                    "type": "fixture_step",
+                    "inputs": [
+                      "mediator"
+                    ],
+                    "outputs": [
+                      "output"
+                    ]
+                  }
+                ],
+                "relations": [
+                  {
+                    "id": "e1",
+                    "kind": "causal",
+                    "sign": "+",
+                    "source": "input",
+                    "target": "mediator",
+                    "reaction_id": "r1"
+                  },
+                  {
+                    "id": "e2",
+                    "kind": "causal",
+                    "sign": "+",
+                    "source": "mediator",
+                    "target": "output",
+                    "reaction_id": "r2"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "reference_evidence": {
+        "synthetic": true
+      },
+      "adjudication": {
+        "independent_review": false,
+        "reviewer": null
+      },
+      "scoring_policy": {
+        "policy": "provisional_abstract_chain",
+        "reason": "Synthetic engineering fixture only"
+      },
+      "cohort": {
+        "scope": "synthetic",
+        "previously_exposed": true,
+        "mechanism_group_previously_exposed": true
+      }
+    },
+    {
+      "task": {
+        "schema_version": "path_transfer_v5.contract_v1",
+        "task_id": "synthetic_incomplete",
+        "mechanism_group_id": "fixture",
+        "qualification": "synthetic",
+        "source_taxon": {
+          "taxon_id": 10090,
+          "scientific_name": "Mus musculus"
+        },
+        "source_context": {
+          "host_taxon": 10090,
+          "description": "Synthetic fixture, no experiment"
+        },
+        "human_context": {
+          "host_taxon": 9606,
+          "description": "Synthetic fixture, no experiment"
+        },
+        "perturbation": {
+          "identity": "fixture:input"
+        },
+        "source_start": "input",
+        "source_endpoint": "output",
+        "human_start": {
+          "id": "input",
+          "entity": "fixture:input",
+          "taxon": 0,
+          "type": "compound",
+          "state": {}
+        },
+        "human_endpoint": {
+          "id": "output",
+          "entity": "fixture:output",
+          "taxon": 9606,
+          "type": "rna",
+          "state": {}
+        },
+        "human_response_direction": "not_given",
+        "endpoint_type": "rna",
+        "evaluation_level": "state_explicit"
+      },
+      "source_graph": {
+        "nodes": [
+          {
+            "id": "input",
+            "entity": "fixture:input",
+            "taxon": 0,
+            "type": "compound",
+            "state": {}
+          },
+          {
+            "id": "mediator",
+            "entity": "fixture:mediator",
+            "taxon": 10090,
+            "type": "protein",
+            "state": {}
+          },
+          {
+            "id": "output",
+            "entity": "fixture:output",
+            "taxon": 10090,
+            "type": "rna",
+            "state": {}
+          }
+        ],
+        "reactions": [
+          {
+            "id": "r1",
+            "type": "fixture_step",
+            "inputs": [
+              "input"
+            ],
+            "outputs": [
+              "mediator"
+            ]
+          },
+          {
+            "id": "r2",
+            "type": "fixture_step",
+            "inputs": [
+              "mediator"
+            ],
+            "outputs": [
+              "output"
+            ]
+          }
+        ],
+        "relations": [
+          {
+            "id": "e1",
+            "kind": "causal",
+            "sign": "+",
+            "source": "input",
+            "target": "mediator",
+            "reaction_id": "r1"
+          },
+          {
+            "id": "e2",
+            "kind": "causal",
+            "sign": "+",
+            "source": "mediator",
+            "target": "output",
+            "reaction_id": "r2"
+          }
+        ]
+      },
+      "source_provenance": {
+        "records": [],
+        "synthetic": true
+      },
+      "allowed_context": {},
+      "reference_chains": {
+        "chains": []
+      },
+      "reference_evidence": {
+        "synthetic": true
+      },
+      "adjudication": {
+        "independent_review": false,
+        "reviewer": null
+      },
+      "scoring_policy": {
+        "policy": "not_scored_reference_incomplete",
+        "reason": "Exercise null-reference handling"
+      },
+      "cohort": {
+        "scope": "synthetic",
+        "previously_exposed": true,
+        "mechanism_group_previously_exposed": true
+      }
+    }
+  ],
+  "knowledge": [],
+  "blocked_ids": [],
+  "metadata": {
+    "synthetic": true,
+    "purpose": "Serialization and scoring demonstration; not a biological benchmark dataset"
+  }
+}

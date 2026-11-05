@@ -21,3 +21,11 @@ artifacts/
 runs/
 logs/
 .DS_Store
+
+# Benchmark data releases and experiment outputs are distributed separately.
+/data/
+/releases/
+/predictions/
+/experiments/
+/validation/
+/demo-output/
