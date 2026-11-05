@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pertinfer-benchmark"
+version = "0.1.0"
+description = "Public interfaces and independent evaluation for PertInfer benchmarks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.scripts]
+pertinfer-benchmark = "pertinfer_benchmark.cli:main"
+
+[project.urls]
+Repository = "https://github.com/DrHuang97/PertInfer-Benchmark"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

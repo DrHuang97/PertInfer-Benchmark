@@ -1,0 +1,262 @@
+{
+  "schema_version": "path_transfer_v5.contract_v1",
+  "graph": {
+    "nodes": [
+      {
+        "id": "S",
+        "entity": "fixture:S",
+        "taxon": 9606,
+        "type": "protein",
+        "state": {}
+      },
+      {
+        "id": "A",
+        "entity": "fixture:A",
+        "taxon": 9606,
+        "type": "protein",
+        "state": {}
+      },
+      {
+        "id": "T",
+        "entity": "fixture:T",
+        "taxon": 9606,
+        "type": "protein",
+        "state": {}
+      },
+      {
+        "id": "C",
+        "entity": "fixture:C",
+        "taxon": 9606,
+        "type": "protein",
+        "state": {}
+      }
+    ],
+    "reactions": [
+      {
+        "id": "r1",
+        "type": "activation",
+        "inputs": [
+          "S"
+        ],
+        "outputs": [
+          "A"
+        ]
+      },
+      {
+        "id": "r2",
+        "type": "activation",
+        "inputs": [
+          "A"
+        ],
+        "outputs": [
+          "T"
+        ]
+      }
+    ],
+    "relations": [
+      {
+        "id": "e1",
+        "source": "S",
+        "target": "A",
+        "kind": "causal",
+        "sign": "+",
+        "reaction_id": "r1",
+        "evidence_ids": [],
+        "origin": "candidate"
+      },
+      {
+        "id": "e2",
+        "source": "A",
+        "target": "T",
+        "kind": "causal",
+        "sign": "+",
+        "reaction_id": "r2",
+        "evidence_ids": [],
+        "origin": "candidate"
+      },
+      {
+        "id": "d1",
+        "source": "C",
+        "target": "r2",
+        "kind": "dependency",
+        "sign": "neutral",
+        "role": "catalyst",
+        "necessary": true,
+        "evidence_ids": [],
+        "origin": "candidate"
+      }
+    ],
+    "start": "S",
+    "endpoint": "T"
+  },
+  "reference_chains": {
+    "chains": [
+      {
+        "chain_id": "truth",
+        "variants": [
+          {
+            "nodes": [
+              {
+                "id": "S",
+                "entity": "fixture:S",
+                "taxon": 9606,
+                "type": "protein",
+                "state": {}
+              },
+              {
+                "id": "A",
+                "entity": "fixture:A",
+                "taxon": 9606,
+                "type": "protein",
+                "state": {}
+              },
+              {
+                "id": "T",
+                "entity": "fixture:T",
+                "taxon": 9606,
+                "type": "protein",
+                "state": {}
+              },
+              {
+                "id": "C",
+                "entity": "fixture:C",
+                "taxon": 9606,
+                "type": "protein",
+                "state": {}
+              }
+            ],
+            "reactions": [
+              {
+                "id": "r1",
+                "type": "activation",
+                "inputs": [
+                  "S"
+                ],
+                "outputs": [
+                  "A"
+                ]
+              },
+              {
+                "id": "r2",
+                "type": "activation",
+                "inputs": [
+                  "A"
+                ],
+                "outputs": [
+                  "T"
+                ]
+              }
+            ],
+            "relations": [
+              {
+                "id": "e1",
+                "source": "S",
+                "target": "A",
+                "kind": "causal",
+                "sign": "+",
+                "reaction_id": "r1",
+                "evidence_ids": [],
+                "origin": "candidate"
+              },
+              {
+                "id": "e2",
+                "source": "A",
+                "target": "T",
+                "kind": "causal",
+                "sign": "+",
+                "reaction_id": "r2",
+                "evidence_ids": [],
+                "origin": "candidate"
+              },
+              {
+                "id": "d1",
+                "source": "C",
+                "target": "r2",
+                "kind": "dependency",
+                "sign": "neutral",
+                "role": "catalyst",
+                "necessary": true,
+                "evidence_ids": [],
+                "origin": "candidate"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "allowed_context": {
+    "ortholog_candidates": {
+      "S": [
+        {
+          "node": {
+            "id": "S",
+            "entity": "fixture:S",
+            "taxon": 9606,
+            "type": "protein",
+            "state": {}
+          },
+          "evidence_ids": [
+            "fixture:public"
+          ],
+          "canonical_rank": 0
+        }
+      ],
+      "A": [
+        {
+          "node": {
+            "id": "A",
+            "entity": "fixture:A",
+            "taxon": 9606,
+            "type": "protein",
+            "state": {}
+          },
+          "evidence_ids": [
+            "fixture:public"
+          ],
+          "canonical_rank": 0
+        }
+      ],
+      "T": [
+        {
+          "node": {
+            "id": "T",
+            "entity": "fixture:T",
+            "taxon": 9606,
+            "type": "protein",
+            "state": {}
+          },
+          "evidence_ids": [
+            "fixture:public"
+          ],
+          "canonical_rank": 0
+        }
+      ],
+      "C": [
+        {
+          "node": {
+            "id": "C",
+            "entity": "fixture:C",
+            "taxon": 9606,
+            "type": "protein",
+            "state": {}
+          },
+          "evidence_ids": [
+            "fixture:public"
+          ],
+          "canonical_rank": 0
+        }
+      ]
+    },
+    "ppi_inputs": {
+      "source": [],
+      "human": [],
+      "anchors": [],
+      "status": "not_available"
+    },
+    "source_excerpt_ids": [
+      "fixture:source"
+    ],
+    "retrieval_policy": "frozen_gateway_only"
+  }
+}

@@ -1,0 +1,26 @@
+name: Benchmark toolkit
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.10', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m pip install '.[test]' build
+      - run: python -m pytest -q
+      - run: python -m build
+      - name: Install wheel and run outside checkout
+        shell: bash
+        run: |
+          python -m venv "$RUNNER_TEMP/benchmark-venv"
+          "$RUNNER_TEMP/benchmark-venv/bin/python" -m pip install dist/*.whl
+          cd "$RUNNER_TEMP"
+          "$RUNNER_TEMP/benchmark-venv/bin/pertinfer-benchmark" demo --output wheel-demo
+          "$RUNNER_TEMP/benchmark-venv/bin/pertinfer-benchmark" verify-public --public wheel-demo/public
