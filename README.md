@@ -1,8 +1,8 @@
-# PertAgent Benchmark
+# PertInfer Benchmark
 
-Benchmark and evaluation infrastructure for cross-species perturbation mechanism reconstruction.
+Benchmark and evaluation infrastructure accompanying **PertInfer: Agentic Inference of Human Perturbation Chains from Animal Mechanisms**.
 
-Companion method: [PertAgent](https://github.com/DrHuang97/PertAgent).
+Companion method: [PertInfer](https://github.com/DrHuang97/PertInfer).
 
 ## Status
 
@@ -20,14 +20,14 @@ The benchmark repository will own:
 - Evaluation metrics, scoring commands and baseline evaluation interfaces.
 - Minimal examples and instructions for integrating third-party methods.
 
-The benchmark must remain usable without installing the PertAgent method.
+The benchmark must remain usable without installing the PertInfer method.
 Molecular mapping strategies, hypothesis-graph generation, graph-directed search
 decisions and evidence-based graph revision belong to the companion method.
 
 ## Integration boundary
 
 The planned installable Python package will expose public task loading, graph
-validation, prediction export and prediction sealing. PertAgent and other methods
+validation, prediction export and prediction sealing. PertInfer and other methods
 will depend on a pinned benchmark version. Reference access and scoring run in a
 separate evaluation stage after predictions are sealed. Hash manifests support
 consistency checks; they do not by themselves enforce isolation or prove when a
